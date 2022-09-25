@@ -1,0 +1,85 @@
+// Import font
+@font-face {
+    font-family: 'iAWriter';
+    src: url('fonts/iAWriterDuospace-Regular.woff2') format('woff2');
+}
+
+@keyframes pageLoad {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@mixin main_anim($delay) {
+    animation: pageLoad 1.2s ease-in-out $delay both;
+}
+// Variables
+$fg-color: #1a1918;
+$bg-color: #f2ece4;
+$font-body: "iA Writer Duospace", monospcae;
+
+// defaults
+body {
+    color: $fg-color;
+    background-color: $bg-color;
+    font: 0.9370em $font-body;
+    cursor: default;
+    font-feature-settings: "ss04";
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: var(--fg-color);
+}
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+    cursor: pointer;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+}
+// body class
+.body {
+    position: relative;
+    width: 450px;
+    line-height: 210%;
+}
+
+//metadata class
+.metadata{
+    @include main_anim(0s);
+    text-transform: lowercase;
+}
+.about {
+    @include main_anim(.4s);
+    text-align: justify;
+}
+.portfolio {
+    @include main_anim(.8s);
+}
+.links {
+    @include main_anim(1.2s);
+}
+.text {
+    margin-left: 22.5px;
+}
+.alink {
+    margin-left: 22.5px;
+}
+.place {
+    margin-left: 22.5px;
+}
+.time {
+    margin-left: 22.5px;
+}

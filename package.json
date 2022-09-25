@@ -1,0 +1,19 @@
+{
+  "name": "jgw_design",
+  "version": "1.0.0",
+  "scripts": {
+      "dev": "parcel src/index.html --host 192.168.1.100 --port 8080",
+      "build": "parcel build src/index.html"
+  },
+  "author": "Jai Grant-Williams",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "2.7.0",
+    "@parcel/packager-xml": "2.7.0",
+    "@parcel/transformer-sass": "2.7.0",
+    "@parcel/transformer-webmanifest": "2.7.0",
+    "@parcel/transformer-xml": "2.7.0",
+    "parcel": "^2.7.0",
+    "sass": "^1.54.9"
+  }
+}

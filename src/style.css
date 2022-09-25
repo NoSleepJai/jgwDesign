@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "iAWriter";
+  src: url("fonts/iAWriterDuospace-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@keyframes pageLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  font: 0.875em "iA Writer Duospace", monospcae;
+  cursor: default;
+  -moz-font-feature-settings: "ss04";
+  -webkit-font-feature-settings: "ss04";
+  font-feature-settings: "ss04";
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: var(--fg-color);
+  cursor: pointer;
+}
+a:hover::before, a:visited:hover::before {
+  content: "> ";
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+}
+
+.body {
+  position: relative;
+  width: 450px;
+  height: 470px;
+  line-height: 175%;
+}
+
+.metadata {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 0s forwards;
+  text-transform: lowercase;
+}
+
+.button {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 0.4s forwards;
+}
+
+.about {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 0.4s forwards;
+  text-align: justify;
+}
+
+.links {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 0.8s forwards;
+  width: 100px;
+  height: 120px;
+}
+
+.w1 {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 0s forwards;
+}
+
+.w2 {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 0.4s forwards;
+}
+
+.w3 {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 0.8s forwards;
+}
+
+.w4 {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 1.2s forwards;
+}
+
+.w5 {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 1.6s forwards;
+}
+
+.w6 {
+  opacity: 0;
+  animation: pageLoad 1.2s ease-in-out 2s forwards;
+}
+
+.right {
+  float: right;
+}
+
+/*# sourceMappingURL=style.css.map */

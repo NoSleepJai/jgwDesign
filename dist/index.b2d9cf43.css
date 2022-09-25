@@ -1,0 +1,79 @@
+@font-face {
+  font-family: iAWriter;
+  src: url("iAWriterDuospace-Regular.bece5793.woff2") format("woff2");
+}
+
+@keyframes pageLoad {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  color: #1a1918;
+  cursor: default;
+  font-feature-settings: "ss04";
+  background-color: #f2ece4;
+  font: .937em iA Writer Duospace, monospcae;
+}
+
+a, a:visited {
+  color: var(--fg-color);
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.wrapper {
+  width: 80vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.body {
+  width: 450px;
+  line-height: 210%;
+  position: relative;
+}
+
+.metadata {
+  text-transform: lowercase;
+  animation: pageLoad 1.2s ease-in-out both;
+}
+
+.about {
+  text-align: justify;
+  animation: pageLoad 1.2s ease-in-out .4s both;
+}
+
+.portfolio {
+  animation: pageLoad 1.2s ease-in-out .8s both;
+}
+
+.links {
+  animation: pageLoad 1.2s ease-in-out 1.2s both;
+}
+
+.text, .alink, .place, .time {
+  margin-left: 22.5px;
+}
+
+/*# sourceMappingURL=index.b2d9cf43.css.map */
