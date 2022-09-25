@@ -1,0 +1,7 @@
+node_modules
+dist
+dest
+firebase.json
+.firebase
+.firebaserc
+.parcel-cache
