@@ -1,12 +1,11 @@
 
 // import html/css stuff //////////////////////////////
 const timeHTML = document.querySelector(".time");
-const locationHTML = document.querySelector(".place");
+const dateHTML = document.querySelector(".date");
+const placeHTML = document.querySelector(".place");
+const bodyHTML = document.querySelector(".body");
 const textHTML = document.querySelectorAll(".text");
 const counterHTML = document.querySelector("#counter");
-const dotsHTML = document.querySelectorAll(".dots");
-const landingHTML = document.querySelector(".landing");
-const tableHTML = document.querySelector(".table");
 const rootCSS = document.querySelector(":root");
 
 //////////// get user timezone ///////////////////////////
@@ -30,14 +29,6 @@ function fetchLocation(url) {
     })
 }
 
-///////////////// portfolio dots /////////////////
-function iterateDots(){
-    for (i = 0; i < dotsHTML.length; i++) {
-        const dotsText = dotsHTML[i].innerHTML;
-        dotsHTML[i].innerHTML = (dotsHTML[i].innerHTML.length < 3 ? dotsHTML[i].innerHTML + '.' : '');
-    }
-}
-
 ////////////////// changing text ////////////////
 function plusSlides(n) {
   showSlides(index += n);
@@ -56,11 +47,12 @@ function showSlides(n) {
 
 //////////////////////////////////////////////////
 fetchLocation("https://ipapi.co/json/").then(function(data) {
-    locationHTML.textContent = data;
+    placeHTML.textContent = data;
 });
 
 const now = new Date();
 timeHTML.textContent = now.toLocaleTimeString().replaceAll(":", " ");
+dateHTML.textContent = now.toLocaleDateString().replaceAll("/", " ");
 document.title = now.toLocaleTimeString().replaceAll(":", " ").toLowerCase();
 /////////////// dark/light theme /////////////////
 if(now.getHours() >= 19 || now.getHours() <= 6) {
@@ -82,10 +74,15 @@ setInterval(() => {
     
     timeHTML.textContent = now.toLocaleTimeString().replaceAll(":", " ");
     document.title = now.toLocaleTimeString().replaceAll(":", " ").toLowerCase();
-    
-    iterateDots();
 }, 1000)
 
-
-
+///// Mouse Move /////
+// document.addEventListener('mousemove', (e) => {
+//     var images = document.querySelector(".image-dump");
+//
+//    
+//     images.style.left = e.x + "px";
+//     images.style.top = e.y + "px";
+//
+// })
 
